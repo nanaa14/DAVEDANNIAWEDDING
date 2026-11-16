@@ -2101,6 +2101,63 @@
       }
     }
 
+
+
+    /* =========================================================
+       STORY TYPOGRAPHY REFINEMENT
+       Judul Our Love Story dan Chapter I–III memakai keluarga
+       font yang sama, sementara isi cerita rata kanan-kiri.
+       ========================================================= */
+    #story .section-heading h2,
+    #story .timeline-year h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    #story .section-heading h2 em {
+      font-family: inherit;
+      font-weight: 500;
+    }
+
+    #story .timeline-year h3 {
+      font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+      line-height: 0.95;
+    }
+
+    #story .intro-text,
+    #story .timeline-content p,
+    #story .timeline-content .intro-last {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      overflow-wrap: break-word;
+    }
+
+    #story .intro-text {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #story .timeline-content p + p {
+      margin-top: 14px;
+    }
+
+    @media (max-width: 700px) {
+      #story .timeline-year h3 {
+        font-size: clamp(2.7rem, 12vw, 3.8rem);
+      }
+
+      #story .intro-text,
+      #story .timeline-content p,
+      #story .timeline-content .intro-last {
+        text-align: justify;
+        line-height: 1.8;
+      }
+    }
+
   </style>
 </head>
 
